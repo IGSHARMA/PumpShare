@@ -8,7 +8,7 @@ const router = express.Router();
 router.post('/register', async (req, res) => {
     const { name, email, password } = req.body;
     try {
-        const existingUser = await USER.findOne({ email });
+        const existingUser = await User.findOne({ email });
         if (existingUser) {
             return res.status(400).json({ message: 'User already exists' });
         }
@@ -26,6 +26,7 @@ router.post('/register', async (req, res) => {
         const token = jwt.sign({ id: newUser.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
         res.status(201).json({ token, user: { id: newUser._id, name: newUser.name, email: newUser.email } });
     } catch (error) {
+        console.error('Error during registation: ' + error.message);
         res.status(500).json({ message: 'Error registering user' });
     }
 });
