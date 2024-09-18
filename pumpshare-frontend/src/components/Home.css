@@ -1,0 +1,101 @@
+/* Main container with visible background immediately */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    /* Background visible from the start */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards ease-in-out;
+    /* Only components will fade in */
+}
+
+/* Keyframes for fading in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Buttons for login and signup */
+.auth-options {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.auth-button {
+    background-color: #1DB954;
+    color: white;
+    padding: 12px 24px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.auth-button:hover {
+    background-color: #1ed760;
+    /* Slightly lighter green on hover */
+}
+
+.auth-button:active {
+    background-color: #1aa34a;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+/* Optional advanced styling */
+.auth-button {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    /* Advanced styling: shadow for buttons */
+}
+
+.auth-button:hover {
+    transform: scale(1.05);
+    /* Slight scale-up on hover */
+}
+
+.auth-options {
+    gap: 20px;
+    /* Better spacing between buttons */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .auth-button {
+        width: 80%;
+        /* Ensure buttons take more width on small screens */
+    }
+
+    h2 {
+        font-size: 22px;
+        /* Adjust font size for small screens */
+    }
+}

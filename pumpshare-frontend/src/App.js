@@ -7,12 +7,11 @@ import Home from './components/Home';
 function App() {
   return (
     <Router>
-      <div>
-        <h1>GasShare App</h1>
+      <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
     </Router>

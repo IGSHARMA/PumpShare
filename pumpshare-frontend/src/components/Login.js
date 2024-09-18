@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+// import './Login.css';
 
 const Login = () => {
     console.log('Login component loaded');
@@ -21,6 +22,13 @@ const Login = () => {
             setMessage('Login failed. Please check your credentials.');
         }
     };
+
+    // useEffect(() => {
+    //     const container = document.querySelector('.login-container');
+    //     if (container) {
+    //         container.classList.add('fade-in');
+    //     }
+    // }, []);
 
     return (
         <div>

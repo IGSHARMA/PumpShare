@@ -1,16 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import './Home.css';
 
 const Home = () => {
+    useEffect(() => {
+        const container = document.querySelector('.home-container');
+        container.classList.add('fade-in');
+    }, []);
+
     return (
-        <div>
-            <h2>Welcome to PumpShare</h2>
-            <p>Login if you already have an account or SignUp!</p>
-            <div>
-                <Link to='/login'>Login</Link> | <Link to='signup'>Signup</Link>
+        <div className="home-container">
+            <h2>Welcome to GasShare</h2>
+            <div className="auth-options">
+                <button className="auth-button">
+                    <a href="/login">Log In</a>
+                </button>
+                <button className="auth-button">
+                    <a href="/signup">Sign Up</a>
+                </button>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Home;
