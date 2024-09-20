@@ -1,22 +1,46 @@
 /* Container for the landing page */
 .landing-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: black;
     /* Match background color */
     color: white;
+    position: relative;
 }
 
-/* Style for PumpShare title */
+/* PumpShare title */
 .pump-title {
     font-size: 48px;
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    /* Initially hidden for fade-in effect */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
 }
 
-/* Fade-in effect for the title */
+/* Fade-in effect */
 .fade-in {
     opacity: 1;
+}
+
+/* Float-up effect */
+.float-up-fixed {
+    position: fixed;
+    top: 20px;
+    /* Adjust this value to control how close it is to the top */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center the text horizontally */
+    opacity: 1;
+    /* Ensure it's fully visible */
+    transition: transform 2s ease-in-out, top 2s ease-in-out;
+}
+
+/* Application content */
+.app-content {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 100px;
+    /* Adjust this to space the content properly below the PumpShare text */
 }
