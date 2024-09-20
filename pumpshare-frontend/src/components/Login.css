@@ -1,0 +1,65 @@
+/* Main container for login page */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center vertically */
+    align-items: center;
+    /* Center horizontally */
+    height: 100vh;
+    /* Full viewport height */
+    background-color: black;
+    /* Match background color */
+    color: white;
+    /* White text for contrast */
+    text-align: center;
+}
+
+/* Form input fields */
+.input-container input {
+    width: 300px;
+    /* Adjust width of input */
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    background-color: #1c1c1c;
+    /* Dark background for inputs */
+    color: white;
+    /* White text inside inputs */
+}
+
+input::placeholder {
+    color: #b3b3b3;
+    /* Lighter placeholder text */
+}
+
+/* Buttons */
+.auth-button {
+    background-color: #1DB954;
+    /* Green button like on home page */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    width: 200px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #1ed760;
+}
+
+.auth-button:active {
+    background-color: #1aa34a;
+}
+
+/* Message output */
+.message {
+    margin-top: 20px;
+    font-size: 14px;
+}

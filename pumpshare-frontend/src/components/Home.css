@@ -6,7 +6,6 @@
     justify-content: center;
     height: 100vh;
     background-color: black;
-    /* Background visible from the start */
     color: white;
     padding: 20px;
     text-align: center;
@@ -15,7 +14,6 @@
 .fade-in {
     opacity: 0;
     animation: fadeIn 1.5s forwards ease-in-out;
-    /* Only components will fade in */
 }
 
 /* Keyframes for fading in */

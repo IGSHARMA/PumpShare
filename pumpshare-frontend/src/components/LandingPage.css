@@ -1,0 +1,22 @@
+/* Container for the landing page */
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    /* Match background color */
+    color: white;
+}
+
+/* Style for PumpShare title */
+.pump-title {
+    font-size: 48px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* Fade-in effect for the title */
+.fade-in {
+    opacity: 1;
+}

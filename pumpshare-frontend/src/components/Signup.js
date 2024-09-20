@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Signup.css';
 
 const Signup = () => {
     console.log('Signup component loaded');
@@ -23,45 +24,36 @@ const Signup = () => {
     };
 
     return (
-        <div>
-            <h2>Signup</h2>
+        <div className="signup-container">
+            <h2>Sign Up</h2>
             <form onSubmit={handleSignup}>
-                <div>
-                    <label htmlFor="name">Name</label>
+                <div className="input-container">
                     <input
                         type="text"
-                        id="name"
                         placeholder="Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                     />
                 </div>
-                <br />
-                <div>
-                    <label htmlFor="email">Email</label>
+                <div className="input-container">
                     <input
                         type="email"
-                        id="email"
                         placeholder="Email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                <br />
-                <div>
-                    <label htmlFor="password">Password</label>
+                <div className="input-container">
                     <input
                         type="password"
-                        id="password"
                         placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <br />
-                <button type="submit">Sign Up</button>
+                <button type="submit" className="auth-button">Sign Up</button>
+                <p className="message">{message}</p>
             </form>
-            <p>{message}</p>
         </div>
     );
 };
