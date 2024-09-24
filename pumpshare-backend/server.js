@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const fuelCostRoute = require('./routes/fuelCost')
 
 // Initialize environment variables
 dotenv.config();
@@ -19,6 +20,8 @@ mongoose.connect(process.env.MONGO_URI)
 //Auth Routes
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes)
+
+app.use('/api/fuel', fuelCostRoute);
 
 // Listen on Port
 const PORT = process.env.PORT || 8000;
